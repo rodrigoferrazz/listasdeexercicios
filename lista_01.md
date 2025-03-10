@@ -23,6 +23,7 @@ console.log(y);
 let y = 10;
 ```
 **a) A saída será undefined seguido de erro**
+
 **Justificativa: a variável criada por "var" é criada em um escopo geral, portanto mesmo 'x' sendo puxado em uma linha anterior a "var x", a variável existe, contudo não está com o seu valor definido, caso 'console.log(x)' fosse em uma linha abaixo, o valor definido apareceria. Para o outro console.log(), é retornado um erro por conta que uma variável criada com "let" é criada apenas em seu escopo, ou seja, um console.log() que quer retornar a variável que foi criada em linhas seguintes, retornará um erro.**
 
 b) A saída será 5 seguido de 10
