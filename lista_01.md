@@ -47,7 +47,9 @@ console.log(soma(2, 0));
 
 a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
 
-b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
+**b) Substituir if (a || b === 0) por if (a === 0 && b === 0)**
+
+**Justificativa: Anteriormente o código estava verificando que "a" existe ou b === 0, contudo o que deve ser feito é: verificar se "a" ou "b" === 0, ou seja, por isso a forma correta seria a letra b)**
 
 c) Substituir if (a || b === 0) por if (a && b === 0)
 
@@ -80,7 +82,8 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+**b) O código imprime 200.**
+**Justificativa: isso se dá pelo fato de ter sido usado um "break" após a segunda definição do valor da variável "preco", ou seja, caso seja removida a linha 9 do código acima, o valor a ser retornado seria 50**
 
 c) O código imprime 50.
 
@@ -101,7 +104,8 @@ b) 6
 
 c) 18
 
-d) 24
+**d) 24**
+**Justificativa: A lógica do programa é: "x" será todos os elementos do array multiplicado por 2, contudo terá um filtro onde será retornado apenas os números, depois de multiplicados, que são maiores que 5. Após isso será feita a conta de soma de todos os números (iniciando do zero)**
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -115,7 +119,8 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+**c) ["banana", "abacaxi", "manga", "laranja"]**
+**Justificativa: O array retorna as frutas de posição 1 e 2, pelas frutas que estão escritas logo em seguida (em sequência), isso acontece por conta da função "splice"**
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
 ______
@@ -127,7 +132,8 @@ II. Em JavaScript, a herança é implementada através da palavra-chave `extends
 
 a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
-b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
+**b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.**
+**Justificativa: a segunda não justifica a primeira pois a afirmação II apenas mostra como é gerada a herança e não explica o porquê de suas características**
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
@@ -167,7 +173,8 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+**a) I e II são verdadeiras.**
+**Justificativa: apenas a III é incorreta pois Funcionario herda de Pessoa como classe, visto que está definido com a palavra-chave 'extends'**
 
 b) I, II e III são verdadeiras.
 
@@ -184,7 +191,8 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+**b) A asserção é verdadeira e a razão é falsa.**
+**Justificativa: Em JS, caso seja efetuada a sobrecarga de métodos, o último a ser definido será válido, substituindo o anterior**
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
@@ -205,6 +213,24 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
+
+```javascript
+// criadno e definindo as varáveis
+var numeros = [1, 2, 3]
+var soma = 0;
+
+function somaArray(numeros) {
+    // trocando numeros.size por numeros.length (modo correto de chamar o cumrpimento de uma array)
+    for (i = 0; i < numeros.length; i++) {
+        // é necessário que exista o + antes do = para criar loop
+        soma += 2 * numeros[i];
+    }
+    return soma;
+}
+// é preciso chamar numeros dentro da função, para que retorne com a multiplicação correta
+console.log(somaArray(numeros));
+```
+
 ______
 10) Crie um exemplo prático no qual você tenha duas classes:
 
@@ -212,3 +238,36 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+```javascript
+    // Criando a classe produto
+    class Produto {
+        constructor(nome, preco){
+            this.nome = nome;
+            this.preco = preco;
+        }
+        // Criando o método para dar descontos a todos produtos
+        calcularDesconto(){
+            this.preco = this.preco * 0.9
+        }
+    }
+
+    // Criando uma classe que herda da classe Produto
+    class Livro extends Produto{
+        // Redefinindo calcularDesconto()
+        calcularDesconto(){
+            this.preco = this.preco * 0.8
+        }
+    }
+
+    // Criando as variáveis produto e livro
+    produto = new Produto("Lápis", 2.5)
+    livro = new Livro("Bíblia", 60)
+
+    // Relacionando as variáveis com os métodos
+    produto.calcularDesconto()
+    livro.calcularDesconto()
+
+    console.log(livro)
+    console.log(produto)
+```
