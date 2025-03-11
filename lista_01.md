@@ -83,6 +83,7 @@ console.log(calcularPreco("eletrônico"));
 a) O código imprime 1000.
 
 **b) O código imprime 200.**
+
 **Justificativa: isso se dá pelo fato de ter sido usado um "break" após a segunda definição do valor da variável "preco", ou seja, caso seja removida a linha 9 do código acima, o valor a ser retornado seria 50**
 
 c) O código imprime 50.
@@ -105,6 +106,7 @@ b) 6
 c) 18
 
 **d) 24**
+
 **Justificativa: A lógica do programa é: "x" será todos os elementos do array multiplicado por 2, contudo terá um filtro onde será retornado apenas os números, depois de multiplicados, que são maiores que 5. Após isso será feita a conta de soma de todos os números (iniciando do zero)**
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
@@ -120,6 +122,7 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 b) ["banana", "abacaxi", "manga"]
 
 **c) ["banana", "abacaxi", "manga", "laranja"]**
+
 **Justificativa: O array retorna as frutas de posição 1 e 2, pelas frutas que estão escritas logo em seguida (em sequência), isso acontece por conta da função "splice"**
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
@@ -133,6 +136,7 @@ II. Em JavaScript, a herança é implementada através da palavra-chave `extends
 a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
 **b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.**
+
 **Justificativa: a segunda não justifica a primeira pois a afirmação II apenas mostra como é gerada a herança e não explica o porquê de suas características**
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
@@ -174,6 +178,7 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
 **a) I e II são verdadeiras.**
+
 **Justificativa: apenas a III é incorreta pois Funcionario herda de Pessoa como classe, visto que está definido com a palavra-chave 'extends'**
 
 b) I, II e III são verdadeiras.
@@ -192,6 +197,7 @@ ______
 a) A asserção é falsa e a razão é verdadeira.
 
 **b) A asserção é verdadeira e a razão é falsa.**
+
 **Justificativa: Em JS, caso seja efetuada a sobrecarga de métodos, o último a ser definido será válido, substituindo o anterior**
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
