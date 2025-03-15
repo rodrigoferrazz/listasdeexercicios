@@ -43,6 +43,7 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
 **B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.**
+
 **Justificativa: o booleano é retornado true por conta da condição de "||" (ou) que é colocada na variável resultadoBooleano, então caso a primeira condição seja falsa, o código seguirá para a segunda afirmação após o ||, que neste caso é verdadeira, portanto o resultado será "true" (caso tivesse && no lugar de ||, o resultado seria "false"). Para o segundo console.log(), é retornada a sima por conta do loop feito com for, que faz a soma de todos os componentes do array (i).**
 
 C) O código avalia a expressão booleana, imprime o resultado `true` e verifica se o número 5 está presente na lista de números.
@@ -108,6 +109,7 @@ Escolha a opção que responde corretamente qual seria a saída após a execuç�
 A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'
 
 **B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'**
+
 **Justificativa: O que acontece em ambas funçõe quando o array se inicia com '3600' é que var gastos[0] já inicia maior que salário, portanto o que o código roda é apenas saldo = salario - totalGastos; e if(saldo < 0){}, portanto o que é imprimido no console é "-1050" e "-100"**
 
 C) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -100.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -1050.'
@@ -140,6 +142,7 @@ B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensage
 C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
 **D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".**
+
 **Justificativa: o símbolo de porcentagem presente nas linhas 3 e 5 do código verificam se o número definido na variável é divisível por 2 e 3, o que mostra, inicialmente se o número é par e caso não seja, se é divisível por 3, caso nenhuma dessas condições sejam verdadeiras, o resultado é que o número é ímpar e não divisível por 3.**
 
 
@@ -227,6 +230,7 @@ Escolha a opção que responde corretamente:
 A) Setup -> Update -> Draw
 
 **B) Preload -> Create -> Update**
+
 **Justificativa: o preload carrega as imagens, sprites, etc. que serão usados em 'create', que por sua vez, mostra as imagens, sprites, etc. que foram carregadas anteriormente. Update é o código que ficará rodando continuamente no jogo.**
 
 C) Load -> Initialize -> Render
@@ -241,6 +245,7 @@ Escolha a opção que responde corretamente:
 A) Renderizar gráficos 3D para jogos em HTML5.
 
 **B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.**
+
 **Justificativa: é possível visualizar isso pois para adicionar este atributo ao jogo, é preciso colocar nas configs do jogo com o texto "physics: 'arcade'"**
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
